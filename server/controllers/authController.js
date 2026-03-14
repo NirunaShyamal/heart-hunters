@@ -37,6 +37,7 @@ const registerUser = async (req, res) => {
                 _id: user.id,
                 username: user.username,
                 score: user.score,
+                isAdmin: user.isAdmin,
                 token: generateToken(user._id)
             });
         } else {
@@ -61,6 +62,7 @@ const loginUser = async (req, res) => {
                 _id: user.id,
                 username: user.username,
                 score: user.score,
+                isAdmin: user.isAdmin,
                 token: generateToken(user._id)
             });
         } else {

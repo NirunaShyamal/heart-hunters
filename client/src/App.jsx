@@ -6,6 +6,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import GamePage from './pages/GamePage';
 import LeaderboardPage from './pages/LeaderboardPage';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdminRoute from './components/layout/AdminRoute';
 import AuthContext from './context/AuthContext';
 
 // Protected Route Component
@@ -35,6 +37,14 @@ function App() {
               }
             />
             <Route path="/leaderboard" element={<LeaderboardPage />} />
+            <Route
+              path="/admin"
+              element={
+                <AdminRoute>
+                  <AdminDashboardPage />
+                </AdminRoute>
+              }
+            />
             <Route path="/" element={<Navigate to="/game" />} />
           </Routes>
         </div>

@@ -18,6 +18,7 @@ const Navbar = () => {
                         <span>Welcome, {user.username} (Score: {user.score})</span>
                         <Link to="/game">Play</Link>
                         <Link to="/leaderboard">Leaderboard</Link>
+                        {user.isAdmin && <Link to="/admin" style={{ color: '#d1c4e9' }}>Admin Dashboard</Link>}
                         <button onClick={() => dispatch(logout())} style={{ marginLeft: '1rem' }}>Logout</button>
                     </>
                 ) : (

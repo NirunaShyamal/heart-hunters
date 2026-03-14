@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    isAdmin: {
+        type: Boolean,
+        default: false
+    },
     playedIds: [{
         type: String // To track puzzles user has already solved to avoid repetition if possible, or just history
     }]
